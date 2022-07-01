@@ -71,17 +71,12 @@ function createLocalStorage(task){
 
 function createTask(e){
     e.preventDefault();
-
-    
-
     let name = inp1.value;
-
     if(name==""){
         alert("no tasks were given")
     } 
     else if(check_whether_task_is_same(name)){
         alert("task already exist")
-        
     }
     
     else{
@@ -89,9 +84,6 @@ function createTask(e){
         newl.classList.add('list')
         newl.classList.add('item')
         newl.appendChild(document.createTextNode(name));
-        // newl.innerText = name
-        console.log(newl.textContent);
-    
         newl.innerHTML += '<a class= "delete" href="#"><img src="images/ic.png" alt="del" ></a>'
         ul.appendChild(newl)
         inp1.value = ""
@@ -100,8 +92,6 @@ function createTask(e){
 
 function delTask(e){
     if(e.target.parentElement.classList.contains('delete')){
-        // console.log(e.target,'  yes')
-
         ul.removeChild(e.target.parentElement.parentElement)
 
     }
@@ -118,7 +108,6 @@ function delTask(e){
     }else{
         tasks = JSON.parse(localStorage.getItem('tasks'));
 
-        
     }
     tasks.forEach(function(task){
         console.log(e.target.parentElement.parentElement.textContent,task)
@@ -132,12 +121,8 @@ function delTask(e){
 }
 
 function clearTask(e){
-    
-    // ul.innerHTML = ""
     while(ul.firstChild){
         ul.removeChild(ul.firstChild)
-
-
     }
     localStorage.clear()
         

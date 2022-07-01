@@ -112,7 +112,7 @@ function createTask(e){
         // newl.innerText = name
         console.log(newl.textContent);
     
-        newl.innerHTML += '<a class= "delete" href="#"><img src="ic.png" alt="del" ></a>'
+        newl.innerHTML += '<a class= "delete" href="#"><img src="images/ic.png" alt="del" ></a>'
         ul.appendChild(newl)
         inp1.value = ""
         createLocalStorage(name)}

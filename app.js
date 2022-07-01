@@ -4,21 +4,11 @@ let inp2 = document.querySelector("#inp2");
 let ul = document.querySelector(".lists");
 let clear = document.querySelector("#clear");
 
-
-
-
-
 inp1s.addEventListener('click',createTask)
 ul.addEventListener('click',delTask)
 clear.addEventListener('click',clearTask)
 inp2.addEventListener('keyup',searchTask)
 document.addEventListener('DOMContentLoaded',getTasks)
-
-
-
-
-
-
 
 function check_whether_task_is_same(el){
     
@@ -39,7 +29,6 @@ function check_whether_task_is_same(el){
     }
 }
 
-
 function getTasks(e){
     if (localStorage.getItem('tasks') == null){
         // localStorage.createLocalStorage('tasks')
@@ -47,8 +36,6 @@ function getTasks(e){
         console.log('yes')
     }else{
         tasks = JSON.parse(localStorage.getItem('tasks'));
-
-        
     }
     tasks.forEach(function(task){
         let newl = document.createElement('li');
@@ -66,8 +53,6 @@ function getTasks(e){
     })
 }
 
-
-
 function createLocalStorage(task){
     let tasks;
 
@@ -84,10 +69,6 @@ function createLocalStorage(task){
     localStorage.setItem('tasks',JSON.stringify(tasks));
 }
 
-
-
-
-
 function createTask(e){
     e.preventDefault();
 
@@ -103,7 +84,6 @@ function createTask(e){
         
     }
     
-    
     else{
         let newl = document.createElement('li');
         newl.classList.add('list')
@@ -117,12 +97,6 @@ function createTask(e){
         inp1.value = ""
         createLocalStorage(name)}
    }
-
-
-
-
-
-
 
 function delTask(e){
     if(e.target.parentElement.classList.contains('delete')){
@@ -156,12 +130,6 @@ function delTask(e){
     })
     localStorage.setItem('tasks',JSON.stringify(tasks));
 }
-
-
-
-
-
-
 
 function clearTask(e){
     

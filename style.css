@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+:root{
+    --primary-color:#FCF6F5FF;
+    --secondary-color: #2BAE66FF;
+    --text-color:black;
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Signika', sans-serif;
+}
+h1,h3{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+label{
+    font-size: 1rem;
+    display: block;
+}
+input{
+    padding: 0.3rem;
+    display: block;
+    outline: none;
+    border: none;
+    width: 40%;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+input:focus{
+    background-color: rgba(43, 174, 102, 0.582);
+}
+#container{
+    min-height: 100vh;
+    width: 70%;
+    margin: auto;
+    background-color: var(--primary-color);
+}
+.row{
+    width: 80%;
+    margin: auto;
+}
+#inp1submit,#clear{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    min-height: 1rem;
+    min-width: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px rgb(85, 85, 85);
+
+}
+#inp1submit:hover,#clear:hover{
+    transform: scale(110%);
+    background-color: rgba(43, 174, 102, 0.582);
+
+}
+#inp1submit:active,#clear:active{
+    transform: scale(80%);
+
+}
+.lists li{
+    list-style: none;
+    min-height: 3rem;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: minmax(80%,2fr) 1fr;
+    white-space: initial;
+    text-overflow: initial;
+    word-wrap: break-word;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    
+   
+}
+li a{
+    justify-self: center;
+    align-self: center;
+}
+@media only screen and (min-width: 2000px) {
+    #container{
+        font-size: 1.5rem;
+    }
+    label{
+        font-size: 1.5rem;
+
+    }
+    input{
+        height: 3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #container{
+        min-height: 100vh;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 340px) {
+    h4,h5{
+        font-size: 1rem;
+    }
+    #inp1,#inp2{
+        width: 70%;
+    }
+    #inp1submit,#clear{
+        padding: 0.1;
+    }
+}
+@media only screen and (max-width: 124px) {
+    #inp1,#inp2{
+        width: 90%;
+    }
+    
+}
